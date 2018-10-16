@@ -1,0 +1,53 @@
+.major_search{
+    position: absolute;
+    top: 5%;
+    left: 33%;
+}
+
+.booking_search{
+    position: absolute;
+    top: 20%;
+    left: 33%;
+}
+
+.major_search > h2, .booking_search > h2{ 
+    align-content: center;
+    color: rgb(206, 216, 15);
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "URW Chancery L, cursive";
+    opacity: 0.8;
+}
+
+.major_search > input, .booking_search > input{
+    height: 60px;
+    width: 500px;
+    font-size: 20px;
+    font-weight: bolder;
+    border: 2px solid black;
+    padding-left: 4px;
+    caret-color: skyblue;
+    font-style: italic;
+    border-radius: 5px;
+    /* -webkit-text-fill-color: transparent; */
+}
+
+#match{
+    padding: 5px;
+    width: 645px;
+    height: 300px;
+    background-color: white;
+    overflow-y: scroll;
+    color: black;
+}
+
+#no_match{
+    background-color: red;
+}
+
+.searchtransaction_result{
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 33%;
+}

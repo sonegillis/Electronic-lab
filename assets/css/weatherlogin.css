@@ -1,0 +1,60 @@
+.login{
+    position: absolute;
+    top: 12%;
+    left: 35%;
+    border: 2px rgb(57, 126, 138) solid;
+    border-radius: 4px;
+    /* background-color: white; */
+    width: 400px;
+    height: 280px;
+    opacity: 0.6;
+}
+
+#username{
+    color: rgb(57, 126, 138);
+    width: 300px;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+#password{
+    color: rgb(57, 126, 138);
+    width: 300px;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+#station{
+    color: rgb(57, 126, 138);
+    width: 300px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#login{
+    margin-left: 280px;
+    margin-top: 40px; 
+}
+
+.heading{
+    color: rgb(57, 126, 138);
+    opacity: 0.8;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 2%;
+    left: 28%;
+    size: 400px;
+}
+
+.btn-primary{
+    color: black;
+    background-color: rgb(57, 126, 138);
+}
+
+#login_error{
+    position: relative;
+    left: 20%;
+    top: 10%;
+    color: red;
+    font-weight: bolder;
+}

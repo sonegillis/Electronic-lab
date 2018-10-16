@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% load static from staticfiles %}
+
+{% block bodystyles %}
+    <style>
+        body{
+            background: url("{% static 'img/borrowbg.jpg' %}") fixed;
+            background-size: cover;
+            padding: 0;
+            margin: 0;
+            background-repeat:   no-repeat;
+        }
+    </style>
+
+{% endblock %}
+
+{% block style %}
+    <script type="text/javascript" src={% static 'js/borrowequipment.js' %}></script>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/borrowequipment.css' %}">
+    <link rel="stylesheet" href="{% static 'css/loadingspinner.css' %}">
+{% endblock %}
+
+{% block body %}
+
+<div class="form-wrapper">
+    <div class="inner-wrapper">
+        <h1>UNIVERSITY OF BUEA</h1>
+        <h1>FET LAB</h1>
+        <table>
+            <tbody>
+                <tr>
+                    <td id="first-column"><b>MATRICULE<span style="color:red;">*</span>:</b></td>
+                    <td id="middle-column"><input type="text" id="matricule"></td>
+                    <td id="last-column"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td id="first-column"><b>PHONE NUM<span style="color:red;">*</span>:</b></td>
+                    <td id="middle-column"><input type="tel" id="tel"></td>
+                    <td id="last-column"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td id="first-column"><b>RETURN DATE<span style="color:red;">*</span>:</b></td>
+                    <td id="middle-column"><input type="date" id="ret-date"></td>
+                    <td id="last-column"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td id="first-column"><b>ITEM(S)<span style="color:red;">*</span>:</b></td>
+                    <td id="middle-column"><input type="text" id="item"></td>
+                    <td id="last-column"><input type="number" id="quantity" value="1"></td>
+                    <td id="addtest"><img src="{% static 'img/addbutton.png' %}" alt="" id="add_button"></td>
+                </tr>
+            </tbody>
+        </table>
+        {% csrf_token %}
+        <button id="submit" class="btn btn-large btn-success">SUBMIT</button>
+    </div>
+</div>
+<div id="error">*All fields are required</div> <!--I will push this into the form-wrapper in css so that it does not assume transparency-->
+<div class="added-items">
+    <h1>Queued Items</h1>
+    <div class="items">
+
+    </div>
+</div>
+
+<div class="body-wrapper">
+
+</div>
+
+<div class="circle-animate-loading large">
+
+</div>
+
+<div class="search-equipment">
+    
+</div>
+
+{% endblock %}

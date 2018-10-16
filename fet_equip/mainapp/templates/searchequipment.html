@@ -1,0 +1,15 @@
+{% if qs.count > 0 %}
+    <div id="match">
+        <table id="match_table" class="table table-striped">
+            {% for query in qs %}
+                <tbody onclick="equipmentSelected('{{query.id}}', '{{query.component}}')" id="{{query.id}}">
+                    <tr id="table_row">
+                        <td>{{query.component}}</td>
+                        <td>{{query.category}}</td>
+                    </tr>
+                </tbody>
+            {% endfor %}
+        </table>
+    </div>
+    
+{% endif %} 

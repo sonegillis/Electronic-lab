@@ -1,0 +1,47 @@
+{% load static from staticfiles %}
+
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <script type="text/javascript" src={% static 'js/jquery-3.3.1.js' %}></script>
+        <script type="text/javascript" src={% static 'js/base.js' %}></script>
+        {% block style %}
+        {% endblock %}
+        {% block bodystyles %}
+        <style>
+            body{
+                background: url("{% static 'img/homebg.jpg' %}") fixed;
+                background-size: cover;
+                padding: 0;
+                margin: 0;
+                background-repeat:   no-repeat;
+            }
+        </style>
+        {% endblock %}
+    </head>
+    <body>
+        <div  class="open">
+            <span class="cls"></span>
+            <span>
+                <ul class="sub-menu ">
+                    <li>
+                        <a href="{% url 'home' %}" title="home">Home</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'borrow_equipment' %}" title="skills">Borrow Equipment</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'logout_user' %}">Sign Out</a>
+                    </li>
+                </ul>
+            </span>
+            <span class="cls"></span>
+        </div>
+        <div class="posted-by">Devoloped By: <b style="color:rgb(57, 126, 138)" href="https://www.facebook.com/sone.gillis">SONE GILLIS</b></div>
+        {% block body %}
+        {% endblock %}
+        <!-- <a href="http://sergioandra.de" class="button" title="Check out my website :D">Check out my website :D</a> -->
+      
+      
+    </body>
+</html>

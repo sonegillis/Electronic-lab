@@ -1,0 +1,19 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *:after, *:before {
+    box-sizing: inherit;
+  }
+
+  .posted-by
+  {
+      position: absolute;
+      bottom: 26px;
+      margin: 0 auto;
+      color: #FFF;
+      background-color: rgba(0, 0, 0, 0.66);
+      padding: 10px;
+      left: 37%;
+  }
+

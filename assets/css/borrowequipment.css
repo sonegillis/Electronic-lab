@@ -1,0 +1,166 @@
+.form-wrapper{
+    width: 60%;
+    height: 80%;
+    background-color: black;
+    opacity: 0.6;
+    position: absolute;
+    top: 10%;
+    left: 8%;
+}
+
+.added-items{
+    width: 30%;
+    height: 36%;
+    position: absolute;
+    bottom: 20%;
+    right: 2%;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#added-quantity{
+    width: 120px;
+    height: 120px;
+    background: rgb(192, 255, 247);
+    margin-right: 10px;
+    color: white;
+}
+
+.added-item{
+    width: 80%;
+    margin-top: 20px;
+    margin: 10px;
+    height: 30px;
+    overflow-x: hidden;
+}
+
+.added-item:hover{
+    
+}
+
+.items{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.9;
+    overflow-y: scroll;
+}
+
+.inner-wrapper{
+    padding: 10px;
+}
+
+input {
+    background-color: rgba(0,0,0,0.1);
+    color: white;
+    height: 40px;
+    border-radius: 2px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-left: 90px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+td > #first-column{
+    width: 20%;
+}
+
+td > #middle-column{
+    width: 50%;
+}
+
+td > #last-column{
+    width: 20%
+}
+
+#last-column input{
+    margin-left: 150px;
+}
+
+input#quantity{
+    width: 100px;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    padding: 2px 0;
+    color: white;
+}
+
+td > b{
+    color: white
+}
+
+#submit{
+    text-align: center;
+    width: 500px;
+    margin-top: 5%;
+    margin-left: 20%;
+    background-color: black;
+}
+
+#submit:hover{
+    background-color: green;
+}
+
+#error{
+    position: relative;
+    top: 62%;
+    right: 10%;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 18px;
+    display:none;
+}
+
+#add_button{
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+}
+
+#add_button:active{
+    transform: scale(0.7)
+}
+
+.body-wrapper{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+}
+
+#match{
+    padding: 5px;
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    opacity: 0.9;
+    overflow-y: scroll;
+    color: black;
+    cursor: pointer;
+}
+
+#no_match{
+    background-color: red;
+}
+
+.search-equipment{
+    display: none;
+    position: absolute;
+    top: 60%;
+    left: 335px;
+    z-index: 2;
+}
+
+#table_row:hover{
+    background-color: rgb(0, 174, 255);
+}

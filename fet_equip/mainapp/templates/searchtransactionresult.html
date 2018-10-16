@@ -1,0 +1,25 @@
+{% if qs.count > 0 %}
+    <div id="match">
+        <table id="match_table" class="table table-striped">
+            {% for query in qs %}
+                <tbody id="{{query.id}}">
+                    <tr>
+                        <td>{{query.matricule}}</td>
+                        <td>{{query.tel}}</td>
+                        <td>{{query.item}} : <span class="badge">{{query.quantity}}</span></td>
+                        <td>{{query.ret_date}}</td>
+                        <td><button onclick="returnEquipment('{{query.id}}', '{{query.item}}', '{{query.quantity}}')" class="btn btn-primary">Return</button></td>
+                    </tr>
+                </tbody>
+            {% endfor %} 
+        </table>
+    </div>
+
+{% else %}
+    <div id="no_match">
+        <h4>Your Search Doesn't match in the DataBase</h4> 
+    </div>
+    
+{% endif %} 
+
+  

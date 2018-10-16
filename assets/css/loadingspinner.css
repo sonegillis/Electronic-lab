@@ -1,0 +1,22 @@
+.circle-animate-loading{
+    display:none; 
+    animation: loading 1s infinite ease-in both
+}
+
+.large{
+    position: fixed;
+    top: 40%;
+    right: 50%;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    border-top: 6px dotted blue;
+    border-bottom: 1px dotted skyblue;
+    border-left: 1px dotted skyblue;
+    border-right: 1px dotted skyblue;
+}
+
+@keyframes loading{
+    0%{ transform: rotate(0deg)}
+    100%{ transform: rotate(360deg)}
+}

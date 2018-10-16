@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load static from staticfiles %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <script type="text/javascript" src={% static 'js/jquery-3.3.1.js' %}></script>
+    <script type="text/javascript" src={% static 'js/homepage.js' %}></script>
+
+{% endblock %}
+
+{% block body %}
+    <div class="major_search">
+        <h2>Search By Matricule, Phone, OR Item <i>(Borrowing</i>)</h2>
+        {% csrf_token %}
+        <input id="search_bar" type="text">
+        <span>
+            <select id="searching_by">
+                <option value="equipment">Equipment</option>
+                <option value="matricule">Matricule</option>
+                <option value="tel">Phone Number</option>
+            </select>
+        </span>
+    </div>
+    <div class="booking_search">
+        <h2>Search By Matricule, Name or Phone Number <i>(Lab Booking)</i></h2>
+        {% csrf_token %}
+        <input id="search_bar" type="text">
+        <span>
+            <select id="searching_by">
+                <option value="equipment">Name</option>
+                <option value="matricule">Matricule</option>
+                <option value="tel">Phone Number</option>
+            </select>
+        </span>
+    </div>
+    <div class="searchtransaction_result">
+
+    </div>
+    
+{% endblock %}
